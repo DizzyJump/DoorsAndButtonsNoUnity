@@ -21,7 +21,7 @@ namespace DoorsAndButtonsNoUnityTest
             levelConfig.Buttons.Add(new LevelConfig.ButtonConfig { ID = 1, Position = buttonPosition, Radius = 1, View = null });
 
             GameLogicEngine engine = new GameLogicEngine();
-            engine.Init(levelConfig);
+            engine.Init(levelConfig, true);
 
             for(int i=0; i<10000; i++)
             {
