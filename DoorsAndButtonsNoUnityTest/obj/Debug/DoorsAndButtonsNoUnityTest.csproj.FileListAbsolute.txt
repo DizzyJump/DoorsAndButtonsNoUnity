@@ -1,0 +1,9 @@
+C:\git\DoorsAndButtonsNoUnity\DoorsAndButtonsNoUnityTest\bin\Debug\DoorsAndButtonsNoUnityTest.exe.config
+C:\git\DoorsAndButtonsNoUnity\DoorsAndButtonsNoUnityTest\bin\Debug\DoorsAndButtonsNoUnityTest.exe
+C:\git\DoorsAndButtonsNoUnity\DoorsAndButtonsNoUnityTest\bin\Debug\DoorsAndButtonsNoUnityTest.pdb
+C:\git\DoorsAndButtonsNoUnity\DoorsAndButtonsNoUnityTest\obj\Debug\DoorsAndButtonsNoUnityTest.csproj.AssemblyReference.cache
+C:\git\DoorsAndButtonsNoUnity\DoorsAndButtonsNoUnityTest\obj\Debug\DoorsAndButtonsNoUnityTest.csproj.CoreCompileInputs.cache
+C:\git\DoorsAndButtonsNoUnity\DoorsAndButtonsNoUnityTest\obj\Debug\DoorsAndButtonsNoUnityTest.exe
+C:\git\DoorsAndButtonsNoUnity\DoorsAndButtonsNoUnityTest\obj\Debug\DoorsAndButtonsNoUnityTest.pdb
+C:\git\DoorsAndButtonsNoUnity\DoorsAndButtonsNoUnityTest\bin\Debug\Unity.Mathematics.dll
+C:\git\DoorsAndButtonsNoUnity\DoorsAndButtonsNoUnityTest\bin\Debug\Unity.Mathematics.pdb

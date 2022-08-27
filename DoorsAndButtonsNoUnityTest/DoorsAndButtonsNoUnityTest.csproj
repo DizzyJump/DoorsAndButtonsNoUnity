@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{072AC2AE-DD26-4334-8A6A-B0DF6621D014}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DoorsAndButtonsNoUnityTest</RootNamespace>
+    <AssemblyName>DoorsAndButtonsNoUnityTest</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameLogicScripts\Components\Activated.cs" />
+    <Compile Include="GameLogicScripts\Components\Actor.cs" />
+    <Compile Include="GameLogicScripts\Components\ButtonFeature\Button.cs" />
+    <Compile Include="GameLogicScripts\Components\ButtonFeature\ButtonLink.cs" />
+    <Compile Include="GameLogicScripts\Components\ButtonFeature\ButtonLinkRequest.cs" />
+    <Compile Include="GameLogicScripts\Components\ButtonFeature\CanInteractWithButtons.cs" />
+    <Compile Include="GameLogicScripts\Components\DoorFeature\Door.cs" />
+    <Compile Include="GameLogicScripts\Components\DoorFeature\DoorSettings.cs" />
+    <Compile Include="GameLogicScripts\Components\ID.cs" />
+    <Compile Include="GameLogicScripts\Components\MovementFeature\MovementSpeed.cs" />
+    <Compile Include="GameLogicScripts\Components\MovementFeature\MoveTo.cs" />
+    <Compile Include="GameLogicScripts\Components\MovementFeature\Position.cs" />
+    <Compile Include="GameLogicScripts\Components\Radius.cs" />
+    <Compile Include="GameLogicScripts\Components\SceneViewFeature\View.cs" />
+    <Compile Include="GameLogicScripts\Components\UserInputFeature\InputListener.cs" />
+    <Compile Include="GameLogicScripts\Components\UserInputFeature\MovementRequest.cs" />
+    <Compile Include="GameLogicScripts\Configs\LevelConfig.cs" />
+    <Compile Include="GameLogicScripts\Factories\ActorsFactory.cs" />
+    <Compile Include="GameLogicScripts\Factories\ButtonsFactory.cs" />
+    <Compile Include="GameLogicScripts\Factories\DoorsFactory.cs" />
+    <Compile Include="GameLogicScripts\GameLogicEngine.cs" />
+    <Compile Include="GameLogicScripts\Helpers\MathHelpers.cs" />
+    <Compile Include="GameLogicScripts\Interfaces\ISceneObjectView.cs" />
+    <Compile Include="GameLogicScripts\LeoEcs\components.cs" />
+    <Compile Include="GameLogicScripts\LeoEcs\entities.cs" />
+    <Compile Include="GameLogicScripts\LeoEcs\filters.cs" />
+    <Compile Include="GameLogicScripts\LeoEcs\systems.cs" />
+    <Compile Include="GameLogicScripts\LeoEcs\worlds.cs" />
+    <Compile Include="GameLogicScripts\SharedData.cs" />
+    <Compile Include="GameLogicScripts\Systems\ButtonFeature\CheckButtonEnterSystem.cs" />
+    <Compile Include="GameLogicScripts\Systems\ButtonFeature\CheckButtonLeaveSystem.cs" />
+    <Compile Include="GameLogicScripts\Systems\ButtonFeature\FindButtonLinkByIdSystem.cs" />
+    <Compile Include="GameLogicScripts\Systems\DoorFeature\UpdateDoorMovingByDoorStateSystem.cs" />
+    <Compile Include="GameLogicScripts\Systems\DoorFeature\UpdateDoorStateByButtonSystem.cs" />
+    <Compile Include="GameLogicScripts\Systems\MovementFeature\UpdateMovingSystem.cs" />
+    <Compile Include="GameLogicScripts\Systems\SceneViewFeature\UpdateViewPositionSystem.cs" />
+    <Compile Include="GameLogicScripts\Systems\UserInputFeature\UserInputRequestProcessingSystem.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="GameLogicScripts\Components.meta" />
+    <None Include="GameLogicScripts\Components\Activated.cs.meta" />
+    <None Include="GameLogicScripts\Components\Actor.cs.meta" />
+    <None Include="GameLogicScripts\Components\ButtonFeature.meta" />
+    <None Include="GameLogicScripts\Components\ButtonFeature\Button.cs.meta" />
+    <None Include="GameLogicScripts\Components\ButtonFeature\ButtonLink.cs.meta" />
+    <None Include="GameLogicScripts\Components\ButtonFeature\ButtonLinkRequest.cs.meta" />
+    <None Include="GameLogicScripts\Components\ButtonFeature\CanInteractWithButtons.cs.meta" />
+    <None Include="GameLogicScripts\Components\DoorFeature.meta" />
+    <None Include="GameLogicScripts\Components\DoorFeature\Door.cs.meta" />
+    <None Include="GameLogicScripts\Components\DoorFeature\DoorSettings.cs.meta" />
+    <None Include="GameLogicScripts\Components\ID.cs.meta" />
+    <None Include="GameLogicScripts\Components\MovementFeature.meta" />
+    <None Include="GameLogicScripts\Components\MovementFeature\MovementSpeed.cs.meta" />
+    <None Include="GameLogicScripts\Components\MovementFeature\MoveTo.cs.meta" />
+    <None Include="GameLogicScripts\Components\MovementFeature\Position.cs.meta" />
+    <None Include="GameLogicScripts\Components\Radius.cs.meta" />
+    <None Include="GameLogicScripts\Components\SceneViewFeature.meta" />
+    <None Include="GameLogicScripts\Components\SceneViewFeature\View.cs.meta" />
+    <None Include="GameLogicScripts\Components\UserInputFeature.meta" />
+    <None Include="GameLogicScripts\Components\UserInputFeature\InputListener.cs.meta" />
+    <None Include="GameLogicScripts\Components\UserInputFeature\MovementRequest.cs.meta" />
+    <None Include="GameLogicScripts\Configs.meta" />
+    <None Include="GameLogicScripts\Configs\LevelConfig.cs.meta" />
+    <None Include="GameLogicScripts\Factories.meta" />
+    <None Include="GameLogicScripts\Factories\ActorsFactory.cs.meta" />
+    <None Include="GameLogicScripts\Factories\ButtonsFactory.cs.meta" />
+    <None Include="GameLogicScripts\Factories\DoorsFactory.cs.meta" />
+    <None Include="GameLogicScripts\GameLogicEngine.cs.meta" />
+    <None Include="GameLogicScripts\Helpers\MathHelpers.cs.meta" />
+    <None Include="GameLogicScripts\Interfaces.meta" />
+    <None Include="GameLogicScripts\Interfaces\ISceneObjectView.cs.meta" />
+    <None Include="GameLogicScripts\LeoEcs.meta" />
+    <None Include="GameLogicScripts\LeoEcs\components.cs.meta" />
+    <None Include="GameLogicScripts\LeoEcs\entities.cs.meta" />
+    <None Include="GameLogicScripts\LeoEcs\filters.cs.meta" />
+    <None Include="GameLogicScripts\LeoEcs\systems.cs.meta" />
+    <None Include="GameLogicScripts\LeoEcs\worlds.cs.meta" />
+    <None Include="GameLogicScripts\SharedData.cs.meta" />
+    <None Include="GameLogicScripts\Systems.meta" />
+    <None Include="GameLogicScripts\Systems\ButtonFeature.meta" />
+    <None Include="GameLogicScripts\Systems\ButtonFeature\CheckButtonEnterSystem.cs.meta" />
+    <None Include="GameLogicScripts\Systems\ButtonFeature\CheckButtonLeaveSystem.cs.meta" />
+    <None Include="GameLogicScripts\Systems\ButtonFeature\FindButtonLinkByIdSystem.cs.meta" />
+    <None Include="GameLogicScripts\Systems\DoorFeature.meta" />
+    <None Include="GameLogicScripts\Systems\DoorFeature\UpdateDoorMovingByDoorStateSystem.cs.meta" />
+    <None Include="GameLogicScripts\Systems\DoorFeature\UpdateDoorStateByButtonSystem.cs.meta" />
+    <None Include="GameLogicScripts\Systems\MovementFeature.meta" />
+    <None Include="GameLogicScripts\Systems\MovementFeature\UpdateMovingSystem.cs.meta" />
+    <None Include="GameLogicScripts\Systems\SceneViewFeature.meta" />
+    <None Include="GameLogicScripts\Systems\SceneViewFeature\UpdateViewPositionSystem.cs.meta" />
+    <None Include="GameLogicScripts\Systems\UserInputFeature.meta" />
+    <None Include="GameLogicScripts\Systems\UserInputFeature\UserInputRequestProcessingSystem.cs.meta" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="UnityMath\Unity.Mathematics\Unity.Mathematics.csproj">
+      <Project>{19810344-7387-4155-935f-bdd5cc61f0bf}</Project>
+      <Name>Unity.Mathematics</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
